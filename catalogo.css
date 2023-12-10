@@ -5,8 +5,11 @@
 body{
     margin: 0px;
     padding: 0px;
-    
+    background-color: #202020;
+    overflow-x:hidden;
 }
+    
+
 
 
 
@@ -15,7 +18,7 @@ body{
 
 .containerNav {
     display: flex;
-    background-color: black;
+    background-color: #101010;
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #202020;
@@ -112,6 +115,7 @@ body{
     padding-right: 30px;
     margin-top: 20px;
     background-color: none;
+    cursor: pointer;
 }
 
 .navItem h5 {
@@ -123,46 +127,52 @@ body{
 }
 
 .navItem h5:hover {
-    scale: 1.1;
-    transition: 0.5s;
+    scale: 1.05;
+    transition: 0.2s;
 }
 
-.containerRegistrati{
+.buttonNav{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: auto;
     padding: 10px;
-    background-color: #303030;
+    background-color: #202020;
+    border: 1px solid white;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-left: 5px;
 }
-.containerRegistrati:hover {
+.buttonNav:hover {
   background-color: #404040 ;
-  scale: 1.1;
-  transition: 0.5s;
+  scale: 1.02;
+  transition: 0.2s;
 }
-.containerRegistrati h5 {
+.buttonNav h5 {
     font-size: 14px;
     cursor: pointer;
     color: white;
 }
-.containerRegistrati i {
+.buttonNav i {
     font-size: 16px;
     color: white;
 
 }
-
+.sezioneHeader{
+    background-color: #202020;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
 .Header{
     height: 200px;
     width: 100%;
-    background-color: #101010;
+    background-color: none;
     display: flex;
     justify-content: start;
     align-items: start;
     margin: 0px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 200;
 }
 
 .Header h2 {
@@ -176,21 +186,22 @@ body{
 .areaSuggeriti {
     height:150px;
     width: 100%;
-    background-color: #101010;
+    background-color: none;
     display: flex;
     justify-content: start;
     align-items: end;
     padding-bottom: 10px;
+    border-bottom: #303030 1px;
 }
-
 .Suggeriti{
     height: 50px;
     width: 50%;
-    background-color: #101010;
+    background-color: none;
     display: flex;
     justify-content: start;
     align-items: end;
     margin-left: 30px;
+    margin-bottom: 20px;
 }
 
 .Suggeriti h6 {
@@ -210,12 +221,18 @@ body{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: black;
+    background-color: #202020;
     border: 1px solid white;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 2px;
+    cursor: pointer;
+}
 
+.buttonSuggerimento:hover {
+  background-color: #404040 ;
+  scale: 1.02;
+  transition: 0.2s;
 }
 
 @media only screen and (max-width: 500px) {
@@ -241,7 +258,7 @@ body{
         font-size: 30px;
         font-weight: 700;
     }
-    .containerRegistrati h5 {
+    .buttonNav h5 {
         display: none;
         
     }
@@ -276,36 +293,37 @@ body{
 #containerCard{
     height: auto;
     width: 100%;
-    background-color: #101010;
-    padding-top: 10px;
+    background-color: #404040;
+    padding-top: 20px;
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+
     
 }
 
 #cardProdotto{
-    background-color: #303030;
+    background-color: #202020;
     height: 600px;
     border-radius: 10px;
     width: 350px;
     margin: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 5px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .imgCard{
     flex: 4;
-    background-color: green;
+    background-color: none;
     border-radius: 10px;
     height: 100px;
     margin-bottom: 10px;
+    border: none;
 }
 
 .imgCard img{
@@ -321,7 +339,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    background-color: #303030;
+    background-color: #202020;
     
 }
 
@@ -343,7 +361,7 @@ body{
 }
 .buttonProdotto{
     flex: 0.5;
-    background-color: #303030;
+    background-color: #202020;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,8 +384,8 @@ body{
 
 .buttonAggiungiCarello:hover{
     background-color: #909090;
-    scale: 1.07;
-    transition: 0.5s;
+    scale: 1.04;
+    transition: 0.2s;
 }
 .buttonAggiungiCarello:hover h6, .buttonAggiungiCarello:hover i{ 
     color: black;
@@ -388,4 +406,57 @@ body{
     
    
 }
-
+.footer{
+    background:#101010;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+ 
+    .footer .iconAndLink{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .iconAndLink a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .iconAndLink a:hover{
+    color:#fff;
+    }
+    
+    .footer .iconAndLink ul{
+    width:100%;
+    }
+    
+    .footer .iconAndLink ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .iconAndLink a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .iconAndLink ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .iconAndLink a i{
+    margin:0% 3%;
+    }
+    }
