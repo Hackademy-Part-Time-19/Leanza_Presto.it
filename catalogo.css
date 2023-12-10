@@ -1,0 +1,391 @@
+* {
+    font-family: Helvetica, Sans-Serif;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+
+
+
+
+.containerNav {
+    display: flex;
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #202020;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 100;
+}
+
+.areaLogoNav {
+    flex: 3;
+    background-color: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.containerLogo {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    background-color: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.containerLogo img {
+    height: 100%;
+    cursor: pointer;
+    
+}
+
+.areaSearch {
+    flex: 4;
+    background-color:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerSearch {  
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 70%;
+    background-color: #202020;
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.containerSearch:hover {
+  background-color: #303030 ;
+  transition: 0.5s;
+}
+.containerSearch input {
+    flex: 4;
+    border-radius: 20px;
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    text-align: start;
+    padding-left: 10px;
+    outline: none;
+    background-color: white;
+}
+
+.containerSearch input::placeholder {
+    color: #101010;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: start;
+    font-style: italic;
+}
+
+.containerSearch i {
+    margin-left: 5px;
+    margin-right: 10px;
+    color: white;
+}
+
+.navItem {
+    flex: 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: none;
+    padding-right: 30px;
+    margin-top: 20px;
+    background-color: none;
+}
+
+.navItem h5 {
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.navItem h5:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.containerRegistrati{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    padding: 10px;
+    background-color: #303030;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.containerRegistrati:hover {
+  background-color: #404040 ;
+  scale: 1.1;
+  transition: 0.5s;
+}
+.containerRegistrati h5 {
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+}
+.containerRegistrati i {
+    font-size: 16px;
+    color: white;
+
+}
+
+.Header{
+    height: 200px;
+    width: 100%;
+    background-color: #101010;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.Header h2 {
+    margin-left: 40px;
+    font-size: medium;
+    margin-top: 150px;
+    color: #cacaca;
+    font-size: 40px;
+    font-weight: 700;
+}
+.areaSuggeriti {
+    height:150px;
+    width: 100%;
+    background-color: #101010;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 10px;
+}
+
+.Suggeriti{
+    height: 50px;
+    width: 50%;
+    background-color: #101010;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin-left: 30px;
+}
+
+.Suggeriti h6 {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.buttonSuggerimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    margin-left: 20px;
+    width: auto;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 2px;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .buttonSuggerimento{
+        margin-left: 8px;
+        height: 55%;
+        width: 120px;
+    }
+    .Suggeriti {
+        margin-left: 5px;
+        
+      
+    }
+    .areaSuggeriti {
+        height: 100px;
+        
+    }
+    .Header h2 {
+        margin-left: 20px;
+        font-size: medium;
+        margin-top: 150px;
+        color: #cacaca;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .containerRegistrati h5 {
+        display: none;
+        
+    }
+    .containerSearch {
+        margin-left: 20px;
+    }
+
+
+        
+    
+}
+@media only screen and (max-width: 650px) {
+    .navItem h5 {
+        display: none;
+    }
+    .containerSearch i {
+        display: none;
+    }
+    ::-webkit-input-placeholder {
+        color: white;
+    }
+}
+.buttonSuggerimento h6 {
+    color: white;
+    text-align: center;
+    margin-left: 0px;
+    font-weight: 100;
+    font-size: 14px;
+    white-space: nowrap;
+    
+}
+#containerCard{
+    height: auto;
+    width: 100%;
+    background-color: #101010;
+    padding-top: 10px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+#cardProdotto{
+    background-color: #303030;
+    height: 600px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.imgCard{
+    flex: 4;
+    background-color: green;
+    border-radius: 10px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.imgCard img{
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    object-fit: cover;
+}
+.descrizioneProdotto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #303030;
+    
+}
+
+.titoloProdotto{
+    font-weight: 700;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: white;
+    position: relative;
+    bottom: 10px;
+}
+
+.prezzoProdotto{
+    margin-left: 5px;
+    font-weight: 900;
+    font-size: 17px;
+    color: rgba(255, 0, 0, 0.734);
+    font-size: 15px;
+}
+.buttonProdotto{
+    flex: 0.5;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.buttonAggiungiCarello{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 0px;
+    height: 70%;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.buttonAggiungiCarello:hover{
+    background-color: #909090;
+    scale: 1.07;
+    transition: 0.5s;
+}
+.buttonAggiungiCarello:hover h6, .buttonAggiungiCarello:hover i{ 
+    color: black;
+}
+
+.buttonAggiungiCarello h6{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.buttonAggiungiCarello i{
+    color: white;
+    font-size: 20px;
+    
+   
+}
+
