@@ -52,8 +52,12 @@ body{
     margin-left: 10px;
     margin-top: 20px;
     background-color: #202020;
-    border: 1px solid white;
+}
 
+.containerLogo:hover {
+  background-color: #303030 ;
+  transition: 0.5s;
+  border: 1px solid white;
 }
 .containerLogo img {
     height: 100%;
@@ -147,15 +151,16 @@ body{
     width: auto;
     padding: 10px;
     background-color: #202020;
-    border: 1px solid white;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-left: 5px;
+    transform: 1s ease-in-out;
 }
 .buttonNav:hover {
-  background-color: #404040 ;
-  scale: 1.02;
+  background-color: #303030 ;
+  scale: 1.01;
   transition: 0.2s;
+  border: 1px solid white;
 }
 .buttonNav h5 {
     font-size: 14px;
@@ -232,8 +237,7 @@ body{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #202020;
-    border: 1px solid white;
+    background-color: #303030;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 2px;
@@ -245,6 +249,7 @@ body{
   background-color: #404040 ;
   scale: 1.02;
   transition: 0.2s;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 500px) {
