@@ -5,10 +5,9 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #202020;
+    background-color: #050505;
     overflow-x: hidden;
 }
-
 
 
 
@@ -55,9 +54,9 @@ body {
 }
 
 .containerLogo:hover {
-    background-color: #303030;
+    scale: 1.05;
     transition: 0.5s;
-    border: 1px solid white;
+
 }
 
 .containerLogo img {
@@ -77,7 +76,7 @@ body {
 
 .containerSearch {
     margin-top: 10px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 70%;
@@ -103,6 +102,7 @@ body {
     padding-left: 10px;
     outline: none;
     background-color: #bababa;
+    display: none;
 }
 
 .containerSearch input::placeholder {
@@ -118,6 +118,7 @@ body {
     margin-left: 5px;
     margin-right: 10px;
     color: white;
+    display: none;
 }
 
 .navItem {
@@ -137,7 +138,7 @@ body {
 .navItem h5 {
     margin-right: 30px;
     cursor: pointer;
-    color: white;
+    color: rgba(255, 255, 255, 0.781);
     font-size: 16px;
     margin-top: 8px;
     font-weight: 500;
@@ -146,6 +147,7 @@ body {
 .navItem h5:hover {
     scale: 1.05;
     transition: 0.2s;
+    color: white;
 }
 
 .buttonNav {
@@ -155,7 +157,7 @@ body {
     height: 85%;
     width: auto;
     padding: 10px;
-    background-color: #202020;
+    background-color: #20202088;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-left: 5px;
@@ -171,7 +173,7 @@ body {
 }
 
 .buttonNav h5 {
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     color: white;
     font-weight: 500;
@@ -188,6 +190,9 @@ body {
     background-color: #202020;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+}
+.Annunci{
+    text-wrap: nowrap;
 }
 
 .Header {
@@ -400,6 +405,20 @@ body {
 
 }
 
+#loadingProdotti{
+    height: auto;
+    width: 100%;
+    background-color: #353535;
+    padding-top: 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s opacity;
+    
+}
+
+
 #cardProdotto {
     background-color: #202020;
     height: 500px;
@@ -413,6 +432,7 @@ body {
     flex-direction: column;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: 1s ease-in-out;
 }
 
 .imgCard {
@@ -424,6 +444,7 @@ body {
     margin-bottom: 5px;
     border: none;
     padding: 5px;
+    cursor: pointer;
 }
 
 .imgCard img {
@@ -454,8 +475,11 @@ body {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1; /* number of lines to show */
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical;
+    cursor: pointer;
 }
+
+
 .descrizioneArticoloCard{
     font-weight: 500;
     margin-left: 5px;
@@ -676,7 +700,7 @@ body {
     padding: 0px;
     margin-bottom: 10px;
 }
-.containerButtonVaiAlRegistrati{
+.containerButtonFiltro{
     background-color: #070707;
     height: 150px;
     display: flex;
@@ -758,7 +782,8 @@ body {
     height: 50%;
     width: 200px;
     margin-left: 20px;
-    background-color: #303030;
+    background-color: #30303096;
+    border: 1px solid rgba(255, 255, 255, 0.168);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -794,4 +819,79 @@ body {
     transition: 0.5s;
 }
 
+#containerAnteprimaCategorie{
+    display: flex;
+    overflow: hidden;
+    background-color: #050505;
+    height: 50vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+   
+}
 
+.sottoContainerAnteprime{
+    display: flex;
+    height: 550px;
+    width: auto;
+    background-color: none;
+    padding-right: 10px;
+    margin: 0px;
+    background-color: #050505;
+    
+
+}
+
+#cardAnteprima{
+    display: flex;
+    background-color: none;
+    height: 50vh;
+    width: 25%;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+#cardAnteprima img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+#cardAnteprima:hover{
+    transition: 0.7s;
+    width: 35%;
+    overflow: hidden;  
+}
+
+#cardAnteprima:hover img{
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+
+#cardAnteprima h5 {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    text-shadow: #101010 2px 2px 2px;
+    top: 10%;
+    left: 5%;
+    z-index: 100;
+}
+#cardAnteprima p {
+    position: absolute;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.855);
+    font-weight: 100;
+    text-shadow: #101010 2px 2px 2px;
+    top: 18%;
+    left: 5.2%;
+    z-index: 100;
+}

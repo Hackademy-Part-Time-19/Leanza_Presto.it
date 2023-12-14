@@ -5,6 +5,10 @@ function vaiAlCatalogo() {
     window.location.href = `catalogo.html?nome=${nome}&prezzo=${prezzo}&categoria=${categoria}`;
 }
 
+function vaiAlCatalogoCategoria(categoria) {
+    window.location.href = `catalogo.html?categoria=${categoria}`;
+}
+
 window.addEventListener("load", function () {
     console.log("Pagina caricata");
     if (window.location.href.includes("catalogo.html")) {
@@ -36,6 +40,8 @@ window.addEventListener("load", function () {
         }
 
         filtraProdottiCatalogo(nome, limiteInferiorePrezzo, limiteSuperiorePrezzo, categoria);
+    } else if (window.location.href.includes("landingPage.html")) {
+
     } else {
         console.log("Non sono nella pagina catalogo.html");
     }
@@ -46,7 +52,15 @@ function filtraProdottiCatalogo(nome, limiteInferiorePrezzo, limiteSuperiorePrez
     fetch("https://fakestoreapi.com/products")
         .then((Response) => Response.json())
         .then((data) => {
+            
+
+            document.getElementById("loadingProdotti").style.opacity = "0";
+            setTimeout(function () {
+                document.getElementById("loadingProdotti").style.display = "none";
+            }, 170);
+
             let prodotti = data;
+
             let prodottiFiltrati = prodotti.filter((prodotto) => {
                 return (!limiteSuperiorePrezzo || (prodotto.price >= limiteInferiorePrezzo && prodotto.price <= limiteSuperiorePrezzo)) &&
                     (!nome || prodotto.title.includes(nome)) &&
