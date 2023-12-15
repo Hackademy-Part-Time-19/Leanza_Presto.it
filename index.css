@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica, Sans-Serif;
+    font-family: 'Allerta Stencil', sans-serif;
 }
 
 body {
@@ -210,7 +210,7 @@ body {
     margin-left: 120px;
     font-size: medium;
     margin-top: 150px;
-    color: #cacaca;
+    color: #fbfbfb;
     text-shadow: #101010 2px 2px 2px;
     font-size: 40px;
     font-weight: 700;
@@ -257,6 +257,7 @@ body {
     font-size: 19px;
     font-weight: 900;
     outline: none;
+    cursor: pointer;
 }
 
 .categoryCatalogo option{
@@ -275,6 +276,7 @@ body {
     font-size: 20px;
     font-weight: 900;
     outline: none;
+    cursor: pointer;
 }
 
 .priceCatalogo option{
@@ -528,7 +530,8 @@ body {
     height: 70%;
     width: 170px;
     margin-bottom: 10px;
-    white-space: nowrap
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .buttonAggiungiCarello:hover {
@@ -662,28 +665,35 @@ body {
     position: relative;
 }
 
+.containerImgIntro img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
 .contenitoreGradient{
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
+    bottom: 0px;
     height: 100%;
     width: 100%;
     background-color: black;
-    x-index: 100;
+    Z-index: 100;
     background: linear-gradient(180deg, #070707 0%, rgba(0, 0, 0, 0) 80%);
     transform: rotate(-180deg);
 }
 .h1Intro{
     text-align: center;
-    opacity: 0.9;
-    color: rgb(249, 249, 249);
+    color: white;
     text-shadow: #101010 2px 2px 2px;
     position: absolute;
     top: 250px;
     border: none;
     padding: 10px;
     border-radius: 5px;
+    Z-index: 200;
 }
 
 .h1Intro h1{
@@ -721,6 +731,8 @@ body {
     padding-left: 10px;
     flex-direction: column;
 }
+
+
 .buttonFiltro h6{
     color: rgba(0, 0, 0, 0.644);
     font-size: 12px;
@@ -739,6 +751,7 @@ body {
     font-size: 19px;
     font-weight: 900;
     outline: none;
+    cursor: pointer;
 }
 
 .category option{
@@ -746,6 +759,7 @@ body {
     font-size: 15px;
     font-weight: 400;
     border: none;
+   
 }
 .price{
     width: 95%;
@@ -757,6 +771,7 @@ body {
     font-size: 20px;
     font-weight: 900;
     outline: none;
+    cursor: pointer;
 }
 
 .price option{
@@ -831,22 +846,22 @@ body {
    
 }
 
-.sottoContainerAnteprime{
+.sottoContainerAnteprime {
     display: flex;
-    height: 550px;
-    width: auto;
+    height: 100%;
+    width: 100%;
     background-color: none;
     padding-right: 10px;
     margin: 0px;
     background-color: #050505;
-    
-
+    gap: 5px; /* Spazio tra le card */
+    transition: flex 0.7s; /* Aggiungi una transizione per animare lo stringimento */
 }
 
-#cardAnteprima{
+#cardAnteprima {
     display: flex;
     background-color: none;
-    height: 50vh;
+    height: 100%;
     width: 25%;
     margin: 0px;
     padding: 0px;
@@ -854,6 +869,15 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    flex-shrink: 1; /* Le card possono stringersi */
+    flex-grow: 1; /* Le card possono crescere */
+}
+
+#cardAnteprima:hover {
+    transition: 0.7s;
+    width: 35%;
+    flex-grow: 3; /* Aumenta la crescita delle card in hover */
+    flex-shrink: 0; /* Evita lo stringimento delle card in hover */
 }
 
 
@@ -864,11 +888,6 @@ body {
     opacity: 0.9;
 }
 
-#cardAnteprima:hover{
-    transition: 0.7s;
-    width: 35%;
-    overflow: hidden;  
-}
 
 #cardAnteprima:hover img{
     transition: 0.7s;
