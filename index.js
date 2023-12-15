@@ -40,7 +40,6 @@ window.addEventListener("load", function () {
         }
 
         filtraProdottiCatalogo(nome, limiteInferiorePrezzo, limiteSuperiorePrezzo, categoria);
-    } else if (window.location.href.includes("landingPage.html")) {
 
     } else {
         console.log("Non sono nella pagina catalogo.html");
