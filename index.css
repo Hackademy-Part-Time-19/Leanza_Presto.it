@@ -914,3 +914,157 @@ body {
     left: 5.2%;
     z-index: 100;
 }
+
+/* FINE LANDING PAGE */
+
+/* INIZIO PAGINA PRODOTTO */
+
+.containerProdottoDettaglio{
+    height: 100vh;
+    width: 100%;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImgProdottoDettaglio{
+    flex:1;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgDettaglio{
+    width: 70%;
+    height: 85%;
+    object-fit: contain;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 50px;
+    margin-top: 80px; 
+}
+
+.imgDettaglio img{
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+}
+
+.containerDescrizioneProdottoDettaglio{
+    flex:1;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: start;
+    padding-left: 100px;
+    padding-right: 200px;
+    align-items: center;
+   
+}
+.titoloDescrizioneProdotto{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-shadow: #101010 2px 2px 2px;
+    margin-bottom: 30px;
+    background-color: none;
+}
+.testoDescrizioneProdotto{
+    font-weight: 500;
+    color: white;
+    text-shadow: #101010 2px 2px 2px;
+    margin-bottom: 30px;
+    background-color: none;
+    padding-right: 200px;
+}
+.prezzoDescrizioneProdotto{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.716);
+    text-shadow: #101010 2px 2px 2px;
+    margin-bottom: 30px;
+    background-color: none;
+}
+
+.TagliaDescrizione{
+    background-color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 70%;
+
+}
+
+#selezionaTaglia{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.btnTagliaDescrizione{
+    height: 40px;
+    width: 95%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+}
+.btnTagliaDescrizione h6{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 10px;
+    font-size: 19px;
+    margin-top: 5px;
+}
+.btnTagliaDescrizione i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btnTagliaDescrizione:hover{
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #101010;
+    
+    
+}
+.btnTagliaDescrizione:hover h6{
+    color: black;
+    transition: 0.5s;
+}
+.btnTagliaDescrizione:hover i{
+    color: black;
+    transition: 0.5s;
+}
+.containerBtnIcon{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 50px;
+    width: 100%;
+    background-color: none;
+    margin-top: 10px;
+}
+.containerHeart{
+    height: 37px;
+    width: 37px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 2px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+}
+.containerHeart:hover{
+    background-color: #101010;
+    transition: 0.5s;
+    color: white;
+}

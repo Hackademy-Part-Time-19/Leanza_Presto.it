@@ -76,7 +76,7 @@ function visualizzaProdotti(prodotti) {
     for (let i = 0; i < prodotti.length; i++) {
         let prodotto = prodotti[i];
         container.innerHTML += `<div id="cardProdotto" class="col-3">
-            <div class="imgCard">
+            <div class="imgCard" onclick="vaiAlProdotto()"{>
                 <img src="${prodotto.image}" alt="" class="">
             </div>
             <div class="testoCard">
@@ -96,6 +96,14 @@ function visualizzaProdotti(prodotti) {
 function vaiAllaHome() {
     window.location.href = "./landingPage.html";
 }
+
+function vaiAlProdotto(){
+    window.location.href = "./paginaProdotto.html";
+    
+    document.getElementById("")
+}
+
+
 
 
 
