@@ -7,6 +7,7 @@ body {
     padding: 0px;
     background-color: #050505;
     overflow-x: hidden;
+    position: relative;
 }
 
 
@@ -677,7 +678,7 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    height: 100%;
+    height: 101%;
     width: 100%;
     background-color: black;
     Z-index: 100;
@@ -842,7 +843,7 @@ body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
    
 }
 
@@ -915,6 +916,354 @@ body {
     z-index: 100;
 }
 
+/* SEZIONE CARUSEL JEWELERY */
+.containerCategoryJewelery{
+    height: auto;
+    width: 100%;
+    background-color: #090909;
+    position: relative;
+  
+    
+}
+
+
+  
+.introCategoryJewelery{
+    height: 60vh;
+    width: 100%;
+    background-color: #090909;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+.containerTestoIntroCategoryJewelery{
+    flex:1;
+    height: 100%;
+    background-color: #090909;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+}
+
+.containerTestoIntroCategoryJewelery h2,p {
+    color: white;
+    font-weight: 300;
+    background-color: none;
+}
+
+.containerTestoIntroCategoryJewelery h5{
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 30px;
+    background-color: none;
+}
+.containerImgIntroCategoryJewelery{
+    flex:1.5;
+    height: 100%;
+    background-color: #090909;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    align-items: end;
+ 
+ 
+}
+.containerImgIntroCategoryJewelery img{
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+.caruselCatagoryJewelery{
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    display:flex;   
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+   
+    
+}
+.containerCardCarusel{
+    display: flex;
+    background-color: none;
+
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 87vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    background-color: rgba(255, 255, 255, 0.386);
+    border: none;
+    border-radius: 5px;
+    font-size: 3rem;
+    color: black;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 100ms;
+  }
+  
+  .carousel-arrow:hover,
+  .carousel-arrow:focus {
+    opacity: 1;
+  }
+  
+  .carousel-arrow--prev {
+    left: 0;
+  }
+  
+  .carousel-arrow--next {
+    right: 0;
+  }
+
+  #cardProdottoCarusel {
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    width: 300px;
+    aspect-ratio: 1;
+    margin: 10px;
+    padding-top: 5px;
+    padding: 5px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+
+.imgCardCarusel {
+    flex: 3;
+    background-color: none;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.imgCardCarusel img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.testoCardCarusel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+
+.titoloProdottoCarusel {
+    font-weight: 700;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+}
+
+
+.descrizioneArticoloCardCarusel{
+    font-weight: 500;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: white;
+    position: relative;
+    bottom: 15px;
+    font-size: 13px;
+    /* ridurre la descrizione */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+
+}
+
+
+
+.buttonProdottoCarusel {
+    flex: 0.5;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.prezzoProdottoCarusel {
+    margin-left: 5px;
+    margin-right: 20px;
+    color: red;
+    font-weight: 900;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+.buttonAggiungiCarelloCarusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0px;
+    height: 70%;
+    width: 170px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.buttonAggiungiCarelloCarusel:hover {
+    background-color: rgba(255, 255, 255, 0.758);
+    scale: 1.04;
+    transition: 0.2s;
+}
+
+.buttonAggiungiCarelloCarusel:hover h6,
+.buttonAggiungiCarelloCarusel:hover i {
+    color: black;
+}
+
+.buttonAggiungiCarelloCarusel h6 {
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.buttonAggiungiCarelloCarusel i {
+    color: white;
+    font-size: 20px;
+
+
+}
+/* SEZIONE ANNUNCIO ELECTRONICS */
+.introCategoryElectronics{
+    height: 80vh;
+    width: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerIntroElectronics1{
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+    flex: 3;
+    height: 100%;
+    width: 100%;
+    background-image: url(./image/black-1072366_1280.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titleIntroImgElectronics1{
+    
+    background-color: none;
+    margin-bottom: 20px;
+}
+.titleIntroImgElectronics1 h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: #101010 2px 2px 2px;
+    margin-bottom:10px;
+    padding: 0px;
+
+}
+.titleIntroImgElectronics1 p{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: #101010 2px 2px 2px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.containerImgElectronics1{
+    height: 400px;
+    width: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.containerImgElectronics1 img{
+    height: 400px;
+    width: 300;
+    object-fit: cover;
+}
+.containerIntroImgParentalControl{
+    margin: 10px;
+    flex: 1.5;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    background-image: url(./image/pexels-cottonbro-studio-5998824.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.titleParentalControl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: none;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.titleParentalControl h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: #101010 2px 2px 2px;
+    margin-bottom:10px;
+    padding: 0px;
+}
+.titleParentalControl p{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: #101010 2px 2px 2px;
+    margin: 0px;
+    padding: 0px;
+}
+
 /* FINE LANDING PAGE */
 
 /* INIZIO PAGINA PRODOTTO */
@@ -931,20 +1280,20 @@ body {
 .containerImgProdottoDettaglio{
     flex:1;
     height: 100%;
-    background-color: none;
+    background-color: #303030;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .imgDettaglio{
-    width: 70%;
-    height: 85%;
-    object-fit: contain;
+    height: 80%;
+    width: 450px;
     margin: 0px;
     padding: 0px;
-    margin-left: 50px;
+    margin-left: 200px;
     margin-top: 80px; 
+    background-color: #101010;
 }
 
 .imgDettaglio img{
@@ -956,15 +1305,16 @@ body {
 .containerDescrizioneProdottoDettaglio{
     flex:1;
     height: 100%;
-    background-color: none;
+    background-color: #303030;
     display: flex;
     justify-content: start;
-    padding-left: 100px;
-    padding-right: 200px;
+   
+
     align-items: center;
    
 }
 .titoloDescrizioneProdotto{
+    margin-left: 50px;
     font-size: 30px;
     font-weight: 700;
     color: white;
@@ -972,13 +1322,22 @@ body {
     margin-bottom: 30px;
     background-color: none;
 }
+.titoloDescrizioneProdotto h2{
+    font-size: 35px;
+}
 .testoDescrizioneProdotto{
+    margin-left: 50px;
     font-weight: 500;
     color: white;
     text-shadow: #101010 2px 2px 2px;
     margin-bottom: 30px;
     background-color: none;
     padding-right: 200px;
+}
+
+.testoDescrizioneProdotto h5{
+    font-size: 15px;
+    line-height: 20px;
 }
 .prezzoDescrizioneProdotto{
     font-size: 30px;
@@ -987,6 +1346,7 @@ body {
     text-shadow: #101010 2px 2px 2px;
     margin-bottom: 30px;
     background-color: none;
+    margin-left: 50px;
 }
 
 .TagliaDescrizione{
@@ -994,6 +1354,7 @@ body {
     border-radius: 20px;
     height: 40px;
     width: 70%;
+    margin-left: 50px;
 
 }
 
@@ -1067,4 +1428,265 @@ body {
     background-color: #101010;
     transition: 0.5s;
     color: white;
+}
+
+
+/* MODALE REGISTRATI */
+
+.containerModaleRegistrati{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.672);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    z-index: 1000;
+    padding-left: 30vh;
+    padding-right: 30vh;
+    padding-top: 15vh;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: start;
+    display: none;
+    transition: 0.2s opacity ease-in-out;
+}
+
+.containerModaleRegistrati h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+.containerModaleRegistrati h2 {
+	text-align: center;
+}
+
+.containerModaleRegistrati p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+.containerModaleRegistrati span {
+	font-size: 12px;
+}
+
+.containerModaleRegistrati a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border: 1px solid #101010;
+	background-color: #101010;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+    border-radius: 10px;
+	border-color: #FFFFFF;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+    font-weight: 100;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: #101010;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+    border-radius: 10px;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+    display: flex;
+}
+
+
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.social-container a:hover {
+    background-color: #101010;
+    color: white;
+    scale: 1.05;
+    transition: 0.5s;
+}
+.bi bi-x-lg{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #363636;
 }

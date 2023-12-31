@@ -36,22 +36,27 @@ window.addEventListener("load", function () {
         } else if (prezzo == "500") {
             limiteInferiorePrezzo = 500;
             limiteSuperiorePrezzo = Infinity;
-
         }
 
         filtraProdottiCatalogo(nome, limiteInferiorePrezzo, limiteSuperiorePrezzo, categoria);
 
-    } else {
+    } else if (window.location.href.includes("paginaProdotto.html")) {
+        let url = new URL(window.location.href);
+        let idProdotto = url.searchParams.get("idProdotto");
+        ottieniProdotto(idProdotto);
+
+    } else if (window.location.href.includes("landingpage.html")) {
+        ottieniProdottiCarusel();
+    }else {
         console.log("Non sono nella pagina catalogo.html");
     }
-
 });
 
 function filtraProdottiCatalogo(nome, limiteInferiorePrezzo, limiteSuperiorePrezzo, categoria) {
     fetch("https://fakestoreapi.com/products")
         .then((Response) => Response.json())
         .then((data) => {
-            
+
 
             document.getElementById("loadingProdotti").style.opacity = "0";
             setTimeout(function () {
@@ -76,7 +81,7 @@ function visualizzaProdotti(prodotti) {
     for (let i = 0; i < prodotti.length; i++) {
         let prodotto = prodotti[i];
         container.innerHTML += `<div id="cardProdotto" class="col-3">
-            <div class="imgCard" onclick="vaiAlProdotto()"{>
+            <div class="imgCard" onclick="vaiAlProdotto(${prodotto.id})"{>
                 <img src="${prodotto.image}" alt="" class="">
             </div>
             <div class="testoCard">
@@ -93,18 +98,101 @@ function visualizzaProdotti(prodotti) {
         </div>`;
     }
 }
+
+function visualizzaProdottiCarusel(prodotti) {
+    let container = document.getElementById("containerCardCarusel");
+    container.innerHTML = "";
+    for (let i = 0; i < prodotti.length; i++) {
+        let prodotto = prodotti[i];
+        container.innerHTML += `<div id="cardProdottoCarusel">
+            <div class="imgCardCarusel" onclick="vaiAlProdotto(${prodotto.id})">
+                <img src="${prodotto.image}"
+                    alt="" class="">
+            </div>
+            <div class="testoCardCarusel">
+                <h6 class="titoloProdottoCarusel">${prodotto.title}</h6>
+                <h6 class="descrizioneArticoloCardCarusel">${prodotto.description}</h6>
+
+            </div>
+            <div class="buttonProdottoCarusel">
+                <h6 class="prezzoProdottoCarusel">${prodotto.price} EUR</h6>
+                <div class="buttonAggiungiCarelloCarusel">
+                    <i class="fa fa-cart-plus"></i>
+                    <h6>Aggiungi al carrello</h6>
+                </div>
+            </div>
+        </div>`
+    }
+}
+
+function ottieniProdottiCarusel() {
+    fetch("https://fakestoreapi.com/products")
+        .then((Response) => Response.json())
+        .then((data) => {
+            let prodotti = data;
+            let prodottiCarusel = prodotti.filter((prodotto) => {
+                return prodotto.category === "jewelery";
+            });
+            visualizzaProdottiCarusel(prodottiCarusel);
+        })
+        .catch((err) => console.log(err));
+}
 function vaiAllaHome() {
-    window.location.href = "./landingPage.html";
+    window.location.href = "./landingpage.html";
+}
+function vaiAlProdotto(id) {
+    window.location.href = `./paginaProdotto.html?idProdotto=${id}`;
+
+}
+function ottieniProdotto(id) {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+        .then((Response) => Response.json())
+        .then((data) => {
+            let prodotto = data;
+            document.getElementById("imgProdotto").src = prodotto.image;
+            document.getElementById("titoloProdotto").innerHTML = prodotto.title;
+            document.getElementById("descrizioneProdotto").innerHTML = prodotto.description;
+            document.getElementById("prezzoProdotto").innerHTML = prodotto.price + " EUR";
+        })
+        .catch((err) => console.log(err));
 }
 
-function vaiAlProdotto(){
-    window.location.href = "./paginaProdotto.html";
-    
-    document.getElementById("")
+// MODALE REGISTRATI
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+});
+signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+});
+
+function apriModaleRegistrati() {
+    document.getElementById("containerModaleRegistrati").style.opacity = "0";
+    document.getElementById("containerModaleRegistrati").style.display = "flex";
+    setTimeout(function () {
+        document.getElementById("containerModaleRegistrati").style.opacity = "1";
+    }, 100);
 }
+function chiudiModaleRegistrati() {
+    document.getElementById("containerModaleRegistrati").style.opacity = "1";
+    document.getElementById("containerModaleRegistrati").style.display = "none";
+    setTimeout(function () {
+        document.getElementById("containerModaleRegistrati").style.opacity = "0";
+    }, 100);
+}
+// FINE MODALE REGISTRATI
 
+// CARUSEL ARROW
+const carousel = document.querySelector(".caruselCatagoryJewelery");
+const slide = document.getElementById("cardProdottoCarusel");
 
-
+function handleCarouselMove(positive = true) {
+    const slideWidth = slide.clientWidth;
+    carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
+}
+// FINE CARUSEL ARROW
 
 
 
